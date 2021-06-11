@@ -1,0 +1,14 @@
+
+{
+"params":{
+  "webname":"Check The Validity of transaction",
+  "gmail-user": "mk626311@gmail.com",
+  "gmail-password": "Mohitgmail9871",
+  "fraud": "This transaction seems to be suspicious",
+  "msg": "This is auto generated mail regarding the Security of your Transaction via credit card.Vulnerable activity has been Identified to your account on ",
+  "with":"With Transaction Id : ",
+  "restrict": ".\nSome Activity has been restricted to your Account till verification of this transaction.",
+  "normal": "This seems to be Usual Transaction",
+  "report": "\n\n\nReport Here.. http://www.cybercelldelhi.in/Report.html"
+}
+}

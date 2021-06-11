@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+
+
+<style>
+   /* *{
+    margin: 0;
+    padding: 0;
+       background-image: url("cars.jpg");
+   } */
+
+    body{
+       background-color: azure;
+       /* background-image: url("cars.jpg"); */
+      
+    }
+    .result {
+        font-family: 'Akaya Telivigala', cursive;
+        text-align: center;
+        font-size: 30px;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+
+
+    <div class="container"> <div class=" text-center mt-5 ">
+            <h1 style="font-family: 'Akaya Telivigala', cursive;">Check Validity of Transaction</h1>
+        </div>
+        <div class="row ">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light" style="height: 267px;">
+                        <div class="container">
+                           
+                            <!-- <form id="contact-form" role="form"> -->
+                                <form action="/result2" id="contact-form" method="POST">
+                                <div class="controls">
+                                    
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="time">Time *</label> <input
+                                                    id="time" type="text" name="time" class="form-control"
+                                                    placeholder="In seconds " required="required"
+                                                    data-error="time is required."> </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group"> <label for="amount">Amount <span>&#36;</span></label> <input
+                                                    id="amount" type="text" name="amount" class="form-control"
+                                                    placeholder="Amount *" required="required"
+                                                    data-error="Amount is required."> </div>
+                                        </div>
+                                    
+                                    </div>
+
+
+
+<!-- <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Message *</label>
+                                                <textarea id="form_message" name="message" class="form-control"
+                                                    placeholder="Write your message here." rows="4" required="required"
+                                                    data-error="Please, leave us a message."></textarea> </div>
+                                        </div> -->
+
+                                   
+                                    <div class="row">
+                                        <!-- <div class="col-md-12">
+                                            <div class="form-group"> <label for="form_message">Message *</label>
+                                                <textarea id="form_message" name="message" class="form-control"
+                                                    placeholder="Write your message here." rows="4" required="required"
+                                                    data-error="Please, leave us a message."></textarea> </div>
+                                        </div> -->
+                                        <div class="col-md-12"> <input type="submit"
+                                                class="btn btn-success btn-send pt-2 btn-block " value="Check" style="width: auto; margin: 20px auto;">
+<!--                                         
+                                          <input type="reset"
+                                            class="btn btn-success btn-send pt-2 btn-block " value="next" style="width: auto;  margin: 20px auto;"> -->
+                                         </div>
+
+                                             
+                                    </div>
+                                                                    
+                                </div>
+                            </form>
+
+                            <div class="result">
+                                {{prediction_text}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div> <!-- /.row-->
+        </div>
+    </div>
+    
+</body>
+
+</html>
